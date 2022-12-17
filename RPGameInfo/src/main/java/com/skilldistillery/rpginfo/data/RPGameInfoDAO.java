@@ -9,6 +9,8 @@ public interface RPGameInfoDAO {
 	
 	public List<CharacterBuild> findAll();
 	
+	public void insertCharacterBuild (CharacterBuild cb);
+	
 	public CharacterBuild updateCharacterBuild(int id, CharacterBuild cb);
 	
 	public boolean deleteCharacterBuild (int id);

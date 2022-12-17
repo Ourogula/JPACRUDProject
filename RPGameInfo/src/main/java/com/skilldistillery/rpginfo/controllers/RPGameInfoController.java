@@ -18,5 +18,29 @@ public class RPGameInfoController {
 		model.addAttribute("builds", dao.findAll());
 		return "home";
 	}
+	
+	//Redirect to find-a-build form
+	@RequestMapping(path= "get.do")
+	public String getterForm () {
+		return "views/getBuild";
+	}
+	
+	//Redirect to insert-a-build form
+	@RequestMapping(path= "insert.do")
+	public String insertForm () {
+		return "views/insertBuild";
+	}
+	
+	//Redirect to update-a-build form
+	@RequestMapping(path= "update.do")
+	public String updateForm () {
+		return "views/updateBuild";
+	}
+	
+	//Redirect to delete-a-build form
+	@RequestMapping(path= "delete.do")
+	public String deleteForm () {
+		return "views/deleteBuild";
+	}
 
 }
