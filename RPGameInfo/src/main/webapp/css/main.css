@@ -1,0 +1,16 @@
+body {
+	background-color: black;
+}
+
+.formContainer {
+	background-color: lightblue;
+	padding-bottom:50px;
+	padding-top:50px;
+}
+
+.noResults {
+	color:white;
+	text-align:center;
+	padding-bottom:50px;
+	padding-top:50px;
+}

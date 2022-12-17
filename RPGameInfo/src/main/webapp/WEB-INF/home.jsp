@@ -10,36 +10,41 @@
 <!-- BootStrap Header -->
 <%@ include file="bootstrapHead.jsp"%>
 </head>
-<body style="background-color: black;">
-<!-- Navbar Start -->
+<body>
+	<!-- Navbar Start -->
 	<%@ include file="nav.jsp"%>
-<!-- Navbar End -->
-<div class="container-fluid">
-	<c:choose>
-		<c:when test="${not empty builds}">
-		<div class="table-responsive">
-			<table class="table table-dark table-striped">
-				<c:forEach var="build" items="${builds}">
-					<tr>
-						<td>${build.id}</td>
-						<td>${build.name}</td>
-						<td>${build.description}</td>
-
-					</tr>
-
-				</c:forEach>
-
-
-			</table>
-		</div>
-		</c:when>
-		<c:otherwise>
+	<!-- Navbar End -->
+	<div class="container-fluid">
+		<c:choose>
+			<c:when test="${not empty builds}">
+				<div class="table-responsive">
+					<table class="table table-dark table-striped">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<c:forEach var="build" items="${builds}">
+								<tr>
+									<td>${build.id}</td>
+									<td>${build.name}</td>
+									<td>${build.description}</td>
+								</tr>
+							</c:forEach>
+						</tbody>
+					</table>
+				</div>
+			</c:when>
+			<c:otherwise>
 		No builds found in the database.
 		</c:otherwise>
 
-	</c:choose>
+		</c:choose>
 	</div>
-<!-- BootStrap Footer -->
-<%@ include file="bootstrapFoot.jsp"%>
+	<!-- BootStrap Footer -->
+	<%@ include file="bootstrapFoot.jsp"%>
 </body>
 </html>
