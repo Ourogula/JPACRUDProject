@@ -106,19 +106,23 @@ public class RPGameInfoController {
 		return "views/deleteBuildResult";
 	}
 	
-	@PostMapping(path="updateFormQuery.do")
+	@RequestMapping(path="updateFormQuery.do")
 	public String updateFormQuery (String id, Model model) {
 		CharacterBuild cb = null;
+		boolean success = false;
 		if (id != "") {
 			Integer parseId = 0;
 			try {
 				parseId = Integer.parseInt(id);
 				cb = dao.findById(parseId);
+				success = true;
 			} catch (NumberFormatException e) {
 				System.out.println("Invalid number provided");
 			}
 		}
 		
+		
+		model.addAttribute("success", success);
 		model.addAttribute("build", cb);
 		model.addAttribute("races", dao.findAllRaces());
 		model.addAttribute("classes", dao.findAllClasses());

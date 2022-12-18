@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Delete a Character Build</title>
+<title>Result - Update Character Build</title>
 <!-- BootStrap Header -->
 <%@ include file="../bootstrapHead.jsp"%>
 </head>
@@ -19,6 +19,8 @@
 	<div>
 		<c:choose>
 			<c:when test="${not empty updateBuild}">
+							<h1 class="updateResult">The Following Character Build was
+					Updated</h1>
 				<table class="table table-dark table-striped">
 					<thead>
 						<tr>

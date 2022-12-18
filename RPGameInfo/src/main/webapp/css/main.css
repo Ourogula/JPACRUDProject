@@ -8,9 +8,17 @@ body {
 	padding-top:50px;
 }
 
-.noResults, .deleteResults, .insertResult, .getterResult {
+.noResults, .deleteResults, .insertResult, .getterResult, .updateResult {
 	color:white;
 	text-align:center;
 	padding-bottom:50px;
 	padding-top:50px;
+}
+
+a {
+	color:white;
+}
+
+a:hover {
+	color:orange;
 }

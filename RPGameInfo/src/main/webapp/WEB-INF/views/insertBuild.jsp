@@ -24,12 +24,12 @@
 			<form action="insertForm.do" method="POST" id="insertForm">
 					Name: <input type="text" name="name" value="${build.name}" placeholder="Name"
 					REQUIRED> Description: <input type="text" name="description" placeholder="Description"> <br />Strength:  <input type="text"
-					name="strength" placeholder="Strength"> Dexterity: <input type="text"
-					name="dexterity" placeholder="Dexterity"> Constitution: <input type="text"
-					name="constitution" > <br /> Intelligence: <input
-					type="text" name="intelligence" placeholder="Intelligence"> Wisdom: <input
-					type="text" name="wisdom" placeholder="Wisdom"> Charisma: <input
-					type="text" name="charisma" placeholder="Charisma"> <br />
+					name="strength" placeholder="Strength" REQUIRED> Dexterity: <input type="text"
+					name="dexterity" placeholder="Dexterity" REQUIRED> Constitution: <input type="text"
+					name="constitution" placeholder="Constitution" REQUIRED> <br /> Intelligence: <input
+					type="text" name="intelligence" placeholder="Intelligence" REQUIRED> Wisdom: <input
+					type="text" name="wisdom" placeholder="Wisdom" REQUIRED> Charisma: <input
+					type="text" name="charisma" placeholder="Charisma" REQUIRED> <br />
 				Race: 
 				<select name="characterRace">
 					<c:forEach var="race" items="${races}">
