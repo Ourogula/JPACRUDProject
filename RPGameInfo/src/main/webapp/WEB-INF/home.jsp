@@ -32,7 +32,7 @@
 							<c:forEach var="build" items="${builds}">
 								<tr>
 									<td>${build.id}</td>
-									<td>${build.name}</td>
+									<td><a href="getterForm.do?id=${build.id}">${build.name}</a></td>
 									<td>${build.description}</td>
 									<td>${build.race.name}</td>
 									<td>${build.charClass.name}</td>
