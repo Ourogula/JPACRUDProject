@@ -1,7 +1,6 @@
 package com.skilldistillery.rpginfo.entities;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -13,10 +12,10 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class CharacterBuildTest {
+class RaceTest {
 	private static EntityManagerFactory emf;
 	private EntityManager em;
-	private CharacterBuild build;
+	private Race race;
 	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -31,26 +30,18 @@ class CharacterBuildTest {
 	@BeforeEach
 	void setUp() throws Exception {
 	    em = emf.createEntityManager();
-	    build = em.find(CharacterBuild.class, 11);
+	    race = em.find(Race.class, 1);
 	}
 
 	@AfterEach
 	void tearDown() throws Exception {
-		build = null;
+		race = null;
 	    em.close();
 	}
 
 	@Test
 	void test_entity_mappings() {
-		assertNotNull(build);
-		assertEquals("Lance Longinus", build.getName());
+		assertNotNull(race);
+		assertEquals("Human", race.getName());
 	}
-	
-	@Test
-	void test_entity_joins () {
-		assertNotNull(build);
-		assertEquals("Dwarf", build.getRace().getName());
-		assertEquals("Fighter", build.getCharClass().getName());
-	}
-
 }

@@ -1,28 +1,57 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-    
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert a Character Build</title>
+<title>Create a Character Build</title>
 <!-- BootStrap Header -->
 <%@ include file="../bootstrapHead.jsp"%>
 </head>
 <body>
-<!-- Navbar Start -->
+	<!-- Navbar Start -->
 	<%@ include file="../nav.jsp"%>
-<!-- Navbar End -->
+	<!-- Navbar End -->
+
+	<div class="row" style="text-align: center;">
+		<h2 style="color: white;">Creating Character Build</h2>
+	</div>
+	<div class="row">
+		<div class="col-2"></div>
+		<div class="col-8 formContainer">
+			<form action="insertForm.do" method="POST" id="insertForm">
+					Name: <input type="text" name="name" value="${build.name}" placeholder="Name"
+					REQUIRED> Description: <input type="text" name="description" placeholder="Description"> <br />Strength:  <input type="text"
+					name="strength" placeholder="Strength"> Dexterity: <input type="text"
+					name="dexterity" placeholder="Dexterity"> Constitution: <input type="text"
+					name="constitution" > <br /> Intelligence: <input
+					type="text" name="intelligence" placeholder="Intelligence"> Wisdom: <input
+					type="text" name="wisdom" placeholder="Wisdom"> Charisma: <input
+					type="text" name="charisma" placeholder="Charisma"> <br />
+				Race: 
+				<select name="characterRace">
+					<c:forEach var="race" items="${races}">
+						<option value="${race.id}">${race.name}</option>
+					</c:forEach>
+				</select>
+				 Class: 
+				<select name="characterClass">
+					<c:forEach var="charClass" items="${classes}">
+						<option value="${charClass.id}">${charClass.name}</option>
+					</c:forEach>
+				</select>
+				<button type="submit">Create Character Build</button>
+
+			</form>
+		</div>
+		<div class="col-2"></div>
+	</div>
 
 
-<div>
-Insert Stub
 
-
-</div>
-
-<!-- BootStrap Footer -->
-<%@ include file="../bootstrapFoot.jsp"%>
+	<!-- BootStrap Footer -->
+	<%@ include file="../bootstrapFoot.jsp"%>
 </body>
 </html>

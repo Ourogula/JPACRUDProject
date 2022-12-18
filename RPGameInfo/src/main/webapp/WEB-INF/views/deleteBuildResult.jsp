@@ -19,12 +19,21 @@
 	<div>
 		<c:choose>
 			<c:when test="${not empty deletedBuild}">
+				<h1 class="deleteResults">Deleted the following Character Build</h1>
 				<table class="table table-dark table-striped">
 					<thead>
 						<tr>
 							<th>ID</th>
 							<th>Name</th>
 							<th>Description</th>
+							<th>Strength</th>
+							<th>Dexterity</th>
+							<th>Constitution</th>
+							<th>Intelligence</th>
+							<th>Wisdom</th>
+							<th>Charisma</th>
+							<th>Race</th>
+							<th>Class</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -32,12 +41,20 @@
 							<td>${deletedBuild.id}</td>
 							<td>${deletedBuild.name}</td>
 							<td>${deletedBuild.description}</td>
+							<td>${deletedBuild.strength}</td>
+							<td>${deletedBuild.dexterity}</td>
+							<td>${deletedBuild.constitution}</td>
+							<td>${deletedBuild.intelligence}</td>
+							<td>${deletedBuild.wisdom}</td>
+							<td>${deletedBuild.charisma}</td>
+							<td>${deletedBuild.race.name}</td>
+							<td>${deletedBuild.charClass.name}</td>
 						</tr>
 					</tbody>
 				</table>
 			</c:when>
 			<c:otherwise>
-				<h3>No Results Found to Delete</h3>
+				<h3 class="noResults">No Results Found to Delete</h3>
 			</c:otherwise>
 		</c:choose>
 	</div>

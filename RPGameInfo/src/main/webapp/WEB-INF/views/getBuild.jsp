@@ -32,7 +32,6 @@
 		</div>
 	</div>
 
-
 	<!-- BootStrap Footer -->
 	<%@ include file="../bootstrapFoot.jsp"%>
 </body>

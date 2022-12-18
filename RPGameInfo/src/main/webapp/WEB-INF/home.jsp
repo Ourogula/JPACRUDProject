@@ -24,6 +24,8 @@
 								<th>ID</th>
 								<th>Name</th>
 								<th>Description</th>
+								<th>Race</th>
+								<th>Class</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -32,6 +34,8 @@
 									<td>${build.id}</td>
 									<td>${build.name}</td>
 									<td>${build.description}</td>
+									<td>${build.race.name}</td>
+									<td>${build.charClass.name}</td>
 								</tr>
 							</c:forEach>
 						</tbody>
@@ -39,7 +43,7 @@
 				</div>
 			</c:when>
 			<c:otherwise>
-		No builds found in the database.
+		<h1 class="noResults">No builds found in the database.</h1>
 		</c:otherwise>
 
 		</c:choose>

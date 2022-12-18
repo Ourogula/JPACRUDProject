@@ -9,6 +9,8 @@
 		<!-- Entities START -->
 		
 		<class>com.skilldistillery.rpginfo.entities.CharacterBuild</class>
+		<class>com.skilldistillery.rpginfo.entities.Race</class>
+		<class>com.skilldistillery.rpginfo.entities.CharacterClass</class>
 
 		<!-- Entities END -->
 

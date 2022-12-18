@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Delete a Character Build</title>
+<title>Choose a Character Build to Update</title>
 <!-- BootStrap Header -->
 <%@ include file="../bootstrapHead.jsp"%>
 </head>
@@ -20,11 +20,11 @@
 		<div class="row">
 			<div class="col-4"></div>
 			<div class="col-4 formContainer">
-				<h3>Insert ID of Character Build to Delete</h3>
-				<form id="deleteForm" action="deleteForm.do" method="POST">
+				<h3>Insert ID of Character Build to Update</h3>
+				<form id="updateForm" action="updateFormQuery.do" method="POST">
 					<p>Character Build ID:</p>
 					<input type="text" name="id" REQUIRED>
-					<button type="submit" form="deleteForm">Delete a Build</button>
+					<button type="submit" form="updateForm">Update a Build</button>
 				</form>
 			</div>
 			<div class="col-4"></div>

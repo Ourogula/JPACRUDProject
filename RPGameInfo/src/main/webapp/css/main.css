@@ -8,7 +8,7 @@ body {
 	padding-top:50px;
 }
 
-.noResults {
+.noResults, .deleteResults, .insertResult, .getterResult {
 	color:white;
 	text-align:center;
 	padding-bottom:50px;

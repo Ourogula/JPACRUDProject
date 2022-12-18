@@ -19,12 +19,21 @@
 	<div>
 		<c:choose>
 			<c:when test="${not empty build}">
+			<h1 class="getterResult">The Following Character Build Matches ID: ${build.id}</h1>
 				<table class="table table-dark table-striped">
 					<thead>
 						<tr>
 							<th>ID</th>
 							<th>Name</th>
 							<th>Description</th>
+							<th>Strength</th>
+							<th>Dexterity</th>
+							<th>Constitution</th>
+							<th>Intelligence</th>
+							<th>Wisdom</th>
+							<th>Charisma</th>
+							<th>Race</th>
+							<th>Class</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -32,6 +41,14 @@
 							<td>${build.id}</td>
 							<td>${build.name}</td>
 							<td>${build.description}</td>
+							<td>${build.strength}</td>
+							<td>${build.dexterity}</td>
+							<td>${build.constitution}</td>
+							<td>${build.intelligence}</td>
+							<td>${build.wisdom}</td>
+							<td>${build.charisma}</td>
+							<td>${build.race.name}</td>
+							<td>${build.charClass.name}</td>
 						</tr>
 					</tbody>
 				</table>
