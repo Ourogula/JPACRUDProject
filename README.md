@@ -13,7 +13,7 @@ The 'Delete' webpage allows a user to delete an existing character build. This o
 The home, create, update, and delete webpages all display every character build in the database under their respective forms. All of these displays have hyperlinks on the build names for their associated actions except for the 'Delete' webpage. This is intentional in order to prevent the unintentional deletion of builds.
 
 ## Entity Relations Diagram
-[![RPGDB ERD](images/ERD.png)]
+![RPGDB ERD](images/ERD.png)
 
 ## Lessons Learned
 There were many iterations of this project as I refined and refactored the application to show properly. The many iterations provided some great practice for styling and formatting the controller and JSP files so that they were more readable.
