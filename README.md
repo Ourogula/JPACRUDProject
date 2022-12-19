@@ -10,7 +10,7 @@ The 'Update' webpage allows a user to update an existing character build and all
 
 The 'Delete' webpage allows a user to delete an existing character build. This option needs a user to enter the ID of a character build, and all character builds currently in the database are displayed below the form for ease of use. Once deleted, the user is either show the information of the deleted build, or the user is notified that the character build deletion has failed.
 
-The home, create, update, and delete webpages all display every character build in the database under their respective forms. All of these displays have hyperlinks on the build names for their associated actions except for the 'Delete' webpage. This is intentional in order to prevent the unintentional deletion of builds.
+The home, update, and delete webpages all display every character build in the database under their respective forms. All of these displays have hyperlinks on the build names for their associated actions except for the 'Delete' webpage. This is intentional in order to prevent the unintentional deletion of builds.
 
 ## Entity Relations Diagram
 ![RPGDB ERD](images/ERD.png)
