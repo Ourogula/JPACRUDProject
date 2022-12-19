@@ -49,8 +49,8 @@ class CharacterBuildTest {
 	@Test
 	void test_entity_joins () {
 		assertNotNull(build);
-		assertEquals("Dwarf", build.getRace().getName());
-		assertEquals("Fighter", build.getCharClass().getName());
+		assertEquals("Human", build.getRace().getName());
+		assertEquals("Assassin", build.getCharClass().getName());
 	}
 
 }
